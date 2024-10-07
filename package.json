@@ -9,16 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@vercel/og": "^0.6.3",
+    "dom-to-image": "^2.6.0",
+    "mongodb": "^6.9.0",
+    "next": "14.2.14",
+    "puppeteer": "^23.5.1",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.14"
+    "sass": "^1.79.4",
+    "stand-boys": "file:"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@types/dom-to-image": "^2.6.7",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
-    "eslint-config-next": "14.2.14"
+    "eslint-config-next": "14.2.14",
+    "typescript": "^5"
   }
 }

@@ -1,5 +1,22 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import { Metadata, ResolvingMetadata } from "next";
+
+type Props = {
+  params: { id: string }
+  searchParams: { [key: string]: string | string[] | undefined }
+}
+
+export async function generateMetadata(
+  { params, searchParams }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  return {
+    openGraph: {
+      images: ['http://localhost:3000/api/og' + parent],
+    },
+  }
+}
 
 export default function Home() {
   return (
