@@ -60,7 +60,7 @@ const ImageComponent: React.FC<ImageProps> = ({ values }) => {
                         key={i}
                         src={fullImageUrl}
                         alt={`Layer-${i}`}
-                        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: "contain" }}
                     />
                 );
             })}

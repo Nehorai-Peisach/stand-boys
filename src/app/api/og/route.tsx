@@ -14,13 +14,16 @@ export async function GET(req: NextRequest) {
             (
                 <div style={{
                     display: "flex",
+                    justifyContent: "center",
+                    width: "100%",
+                    height: "100%"
                 }}>
                     <ImageComponent values={layers} />
                 </div>
             ),
             {
-                width: 200,
-                height: 200,
+                width: 1200,
+                height: 630,
             }
         );
     } catch (error) {
