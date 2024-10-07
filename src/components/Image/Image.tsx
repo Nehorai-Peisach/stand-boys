@@ -35,7 +35,7 @@ const ImageComponent: React.FC<ImageProps> = ({ values }) => {
             position: 'relative', width: '100%', height: '100%',
         }}>
             {new Array(11).fill(0).map((_, i) => {
-                const imageUrl = `http://localhost:3000/svg/${i}/` + (() => {
+                const imageUrl = `https://stand-boys.vercel.app/svg/${i}/` + (() => {
                     switch (i) {
                         case 0: return values[0]; // Background => Background
                         case 1: return values[1]; // Foreground => Foreground
