@@ -1,4 +1,3 @@
-import type { Metadata, ResolvingMetadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 

@@ -1,7 +1,18 @@
 import Generate from "@/components/Genetare/Generate";
 import { Metadata } from "next";
 
-export async function generateMetadata({ searchParams }: any): Promise<Metadata> {
+export async function generateMetadata({ searchParams }: {
+  searchParams: {
+    layer0: string
+    layer1: string
+    layer2: string
+    layer3: string
+    layer4: string
+    layer5: string
+    layer6: string
+    layer7: string
+  }
+}): Promise<Metadata> {
   const queryParams = new URLSearchParams({
     layer0: searchParams.layer0,
     layer1: searchParams.layer1,

@@ -7,7 +7,6 @@ import domtoimage from 'dom-to-image';
 
 const Generate: React.FC = () => {
     const [indexes, setIndexes] = useState<number[]>(new Array(8).fill(0)); // 8 layers with default index 0
-    const imageRef = useRef<HTMLDivElement>(null); // Reference to the Image wrapper
     const isInitialMount = useRef(true); // Track if the component is mounting for the first time
 
     // Load initial indexes from URL parameters
