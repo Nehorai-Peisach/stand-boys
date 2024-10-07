@@ -19,8 +19,8 @@ export async function GET(req: NextRequest) {
                 </div>
             ),
             {
-                width: 800,
-                height: 800,
+                width: 200,
+                height: 200,
             }
         );
     } catch (error) {
