@@ -26,14 +26,14 @@ export async function generateMetadata({ searchParams }: {
 
   return {
     openGraph: {
-      title: "StandBoys Image", // Customize this
+      title: "StandBoys", // Customize this
       description: "Check out this StandBoy image", // Customize this
       images: [`/api/og?${queryParams.toString()}`],
       type: "website", // Adjust if the page represents something different
     },
     twitter: {
       card: "summary_large_image",
-      title: "StandBoys Image", // Customize this
+      title: "StandBoys", // Customize this
       description: "Check out this StandBoy image", // Customize this
       images: [`/api/og?${queryParams.toString()}`],
     },
