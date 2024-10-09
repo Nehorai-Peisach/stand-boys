@@ -18,6 +18,6 @@ const CategoryIcon: React.FC<CategoryIconProps> = ({ url, selected, onClick }) =
             <img src={url} alt="Icon" />
         </div>
     );
-};
+}; 
 
 export default CategoryIcon;

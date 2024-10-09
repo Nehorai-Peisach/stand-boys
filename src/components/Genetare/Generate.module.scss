@@ -9,11 +9,81 @@
         flex-direction: column;
         gap: 1rem;
 
+        button {
+            padding: 10px 0;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            opacity: .9;
+            transition: all .3s;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            &:active {
+                opacity: .75;
+                scale: .95;
+            }
+        }
+
         .inputWrapper {
             display: flex;
-            width: 300px;
+            width: 350px;
             justify-content: space-between;
             gap: 1rem;
+        }
+
+        .totalRarity {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-end;
+            font-size: 16px;
+            margin: 10px 0;
+
+            .rarityLabel {
+                font-weight: bold;
+                margin-top: 5px;
+            }
+
+            .common {
+                color: gray;
+                background-color: lightgray;
+                padding: 2px 5px;
+                border-radius: 5px;
+            }
+
+            .uncommon {
+                color: green;
+                background-color: lightgreen;
+                box-shadow: 0 0 10px green;
+                padding: 2px 5px;
+                border-radius: 5px;
+            }
+
+            .rare {
+                color: blue;
+                background-color: lightblue;
+                box-shadow: 0 0 10px blue;
+                padding: 2px 5px;
+                border-radius: 5px;
+            }
+
+            .epic {
+                color: purple;
+                background-color: violet;
+                box-shadow: 0 0 10px purple;
+                padding: 2px 5px;
+                border-radius: 5px;
+            }
+
+            .legendary {
+                color: darkgoldenrod;
+                background-color: lightgoldenrodyellow;
+                box-shadow: 0 0 10px gold;
+                padding: 2px 5px;
+                border-radius: 5px;
+            }
         }
     }
 }

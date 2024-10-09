@@ -9,7 +9,7 @@ import s from './Image.module.scss';
 // (4 - Clouth: 0 - 9),
 // (5 - Color - Eyes: 0 - 5),
 // (6 - Mouth: 0 - 10),
-// (7 - Hair: 0 - 9),
+// (7 - Hair: 0 - 10),
 
 // Output:
 // (0 - Background: 0 - 10),
@@ -22,7 +22,7 @@ import s from './Image.module.scss';
 // (7 - Eyes Base: 0 - 0),
 // (8 - Color - Eyes: 0 - 5),
 // (9 - Mouth: 0 - 10),
-// (10 - Hair: 0 - 9),
+// (10 - Hair: 0 - 10),
 
 interface ImageProps {
     values: number[]; // Array of selected image values for each layer
