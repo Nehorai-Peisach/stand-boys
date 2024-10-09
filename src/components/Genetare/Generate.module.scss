@@ -51,13 +51,12 @@
         .totalRarity {
             display: flex;
             gap: 1rem;
-            align-items: flex-end;
+            align-items: center;
             font-size: 16px;
             margin: 10px 0;
 
             .rarityLabel {
                 font-weight: bold;
-                margin-top: 5px;
 
                 &>span {
                     padding: 2px 5px;
