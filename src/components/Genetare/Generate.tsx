@@ -186,7 +186,6 @@ const Generate: React.FC = () => {
                         {getRarityLabel()}
                     </div>
                 </div>
-                <button onClick={randomizeIndexes}>Randomize Layers</button> {/* Randomize button */}
 
                 {
                     indexes.map((_, index) => {
@@ -215,8 +214,10 @@ const Generate: React.FC = () => {
                     })
                 }
 
-
-                <button onClick={downloadImage}>Download as PNG</button>
+                <div className={s.btns}>
+                    <button onClick={downloadImage}>Download as PNG</button>
+                    <button onClick={randomizeIndexes}>Randomize Layers</button> {/* Randomize button */}
+                </div>
 
 
             </div>

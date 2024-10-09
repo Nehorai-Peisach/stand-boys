@@ -40,13 +40,8 @@ export async function generateMetadata({ searchParams }: {
   };
 }
 
-
-
 export default function Home() {
-
   return (
-    <div>
-      <Generate />
-    </div>
+    <Generate />
   );
 }
