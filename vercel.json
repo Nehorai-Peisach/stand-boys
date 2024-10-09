@@ -1,13 +1,7 @@
 {
     "functions": {
-        "api/test.js": {
+        "src/api/*.ts": {
             "maxDuration": 30
-        },
-        "api/*.js": {
-            "maxDuration": 15
-        },
-        "src/api/*.js": {
-            "maxDuration": 25
         }
     }
 }
