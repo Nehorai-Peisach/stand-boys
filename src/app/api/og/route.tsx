@@ -3,7 +3,7 @@ import { NextRequest } from "next/server";
 import ImageComponent from "@/components/Image/Image";
 import { backgrounds, bodies, clouths, eyesColors, foregrounds, hairs, mouths, stands } from "@/data/weights";
 
-export const maxDuration = 30000;
+export const maxDuration = 60;
 export async function GET(req: NextRequest) {
     const { searchParams } = new URL(req.url);
 
