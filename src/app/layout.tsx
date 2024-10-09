@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import { Metadata } from "next";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -14,28 +15,28 @@ const geistMono = localFont({
 
 
 
-// export const metadata: Metadata = {
-//   title: "StandBoys",
-//   description: "Discover, customize, and collect your own StandBoy! A world of unique characters, each with their own traits and style. Get yours today and join the StandBoy revolution!",
-//   openGraph: {
-//     title: "StandBoys",
-//     description: "Discover, customize, and collect your own StandBoy! A world of unique characters, each with their own traits and style. Get yours today and join the StandBoy revolution!",
-//     images: [
-//       {
-//         url: "/images/standboy-preview.png",
-//         width: 1200,
-//         height: 630,
-//         alt: "StandBoy Preview",
-//       },
-//     ],
-//   },
-//   twitter: {
-//     card: "summary_large_image",
-//     title: "StandBoys",
-//     description: "Discover, customize, and collect your own StandBoy! A world of unique characters, each with their own traits and style.",
-//     images: ["/images/standboy-preview.png"],
-//   },
-// };
+export const metadata: Metadata = {
+  title: "StandBoys",
+  description: "Discover, customize, and collect your own StandBoy! A world of unique characters, each with their own traits and style. Get yours today and join the StandBoy revolution!",
+  openGraph: {
+    title: "StandBoys",
+    description: "Discover, customize, and collect your own StandBoy! A world of unique characters, each with their own traits and style. Get yours today and join the StandBoy revolution!",
+    images: [
+      {
+        url: "https://stand-boys.vercel.app/standboy-preview.png",
+        width: 1200,
+        height: 630,
+        alt: "StandBoy Preview",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "StandBoys",
+    description: "Discover, customize, and collect your own StandBoy! A world of unique characters, each with their own traits and style.",
+    images: ["https://stand-boys.vercel.app/standboy-preview.png"],
+  },
+};
 
 
 export default function RootLayout({

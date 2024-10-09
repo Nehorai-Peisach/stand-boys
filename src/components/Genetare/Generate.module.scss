@@ -3,6 +3,20 @@
     justify-content: space-around;
     align-items: center;
     height: 100dvh;
+    gap: 2rem;
+
+    .bg {
+        width: 120dvw;
+        height: 100dvh;
+        position: absolute;
+        top: 0;
+        left: -10dvw;
+        z-index: -1;
+        opacity: .1;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
 
     .inputsWrapper {
         display: flex;
@@ -44,46 +58,42 @@
             .rarityLabel {
                 font-weight: bold;
                 margin-top: 5px;
+
+                &>span {
+                    padding: 2px 5px;
+                    border-radius: 5px;
+                }
+
+                .common {
+                    color: gray;
+                    background-color: lightgray;
+                }
+
+                .uncommon {
+                    color: green;
+                    background-color: lightgreen;
+                    box-shadow: 0 0 10px green;
+                }
+
+                .rare {
+                    color: blue;
+                    background-color: lightblue;
+                    box-shadow: 0 0 10px blue;
+                }
+
+                .epic {
+                    color: purple;
+                    background-color: violet;
+                    box-shadow: 0 0 10px purple;
+                }
+
+                .legendary {
+                    color: darkgoldenrod;
+                    background-color: lightgoldenrodyellow;
+                    box-shadow: 0 0 10px gold;
+                }
             }
 
-            .common {
-                color: gray;
-                background-color: lightgray;
-                padding: 2px 5px;
-                border-radius: 5px;
-            }
-
-            .uncommon {
-                color: green;
-                background-color: lightgreen;
-                box-shadow: 0 0 10px green;
-                padding: 2px 5px;
-                border-radius: 5px;
-            }
-
-            .rare {
-                color: blue;
-                background-color: lightblue;
-                box-shadow: 0 0 10px blue;
-                padding: 2px 5px;
-                border-radius: 5px;
-            }
-
-            .epic {
-                color: purple;
-                background-color: violet;
-                box-shadow: 0 0 10px purple;
-                padding: 2px 5px;
-                border-radius: 5px;
-            }
-
-            .legendary {
-                color: darkgoldenrod;
-                background-color: lightgoldenrodyellow;
-                box-shadow: 0 0 10px gold;
-                padding: 2px 5px;
-                border-radius: 5px;
-            }
         }
     }
 }

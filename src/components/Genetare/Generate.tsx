@@ -100,6 +100,46 @@ const Generate: React.FC = () => {
             getRandomIndexByWeight(hairs)
         ];
         setIndexes(newIndexes);
+
+
+        logResults(getRarityLabel().props["children"]);
+    };
+
+
+    const [commons, setCommons] = useState(0);
+    const [uncommons, setUncommons] = useState(0);
+    const [rares, setRares] = useState(0);
+    const [epics, setEpics] = useState(0);
+    const [legendarys, setLegendarys] = useState(0);
+
+    const logResults = (value: string) => {
+        switch (value) {
+            case "Common":
+                setCommons(prev => prev + 1);
+                break;
+            case "Uncommon":
+                setUncommons(prev => prev + 1);
+                break;
+            case "Rare":
+                setRares(prev => prev + 1);
+                break;
+            case "Epic":
+                setEpics(prev => prev + 1);
+                break;
+            case "Legendary":
+                setLegendarys(prev => prev + 1);
+                break;
+            default:
+                break;
+        }
+
+        // Optional: Clear the console and log updated values
+        console.clear();
+        console.log("commons", commons);
+        console.log("uncommons", uncommons);
+        console.log("rares", rares);
+        console.log("epics", epics);
+        console.log("legendarys", legendarys);
     };
 
     const downloadImage = async () => {
@@ -121,17 +161,29 @@ const Generate: React.FC = () => {
     // Calculate total rarity percentage
     const totalRarity = calculateTotalRarity(rarities);
 
+    // Define a function to get the rarity label based on totalRarity
+    const getRarityLabel = () => {
+        if (totalRarity > 5) {
+            return <span className={s.common}>Common</span>;
+        } else if (totalRarity > 2 && totalRarity <= 5) {
+            return <span className={s.uncommon}>Uncommon</span>;
+        } else if (totalRarity > 0.3 && totalRarity <= 2) {
+            return <span className={s.rare}>Rare</span>;
+        } else if (totalRarity > 0.05 && totalRarity <= 0.3) {
+            return <span className={s.epic}>Epic</span>;
+        } else {
+            return <span className={s.legendary}>Legendary</span>;
+        }
+    };
+
     return (
         <div className={s.wrapper}>
+            <div className={s.bg} style={{ backgroundImage: `url(https://stand-boys.vercel.app/svg/0/${indexes[0]}.svg)` }}></div>
             <div className={s.inputsWrapper}>
                 <div className={s.totalRarity}>
                     <strong>Total Rarity:</strong> {totalRarity.toFixed(5)}% {/* Show more precision */}
                     <div className={s.rarityLabel}>
-                        {totalRarity > 10 && <span className={s.common}>Common</span>}
-                        {totalRarity > 5 && totalRarity <= 10 && <span className={s.uncommon}>Uncommon</span>}
-                        {totalRarity > 2 && totalRarity <= 5 && <span className={s.rare}>Rare</span>}
-                        {totalRarity > 0.5 && totalRarity <= 2 && <span className={s.epic}>Epic</span>}
-                        {totalRarity <= 0.5 && <span className={s.legendary}>Legendary</span>}
+                        {getRarityLabel()}
                     </div>
                 </div>
                 <button onClick={randomizeIndexes}>Randomize Layers</button> {/* Randomize button */}
@@ -169,7 +221,7 @@ const Generate: React.FC = () => {
 
             </div>
 
-            <div id="capture" className={s.wrapper} style={{ width: '1080px', height: '1080px', position: 'relative' }}>
+            <div id="capture" className={s.wrapper} style={{ width: '100dvh', height: '100dvh', position: 'relative' }}>
                 <Image values={indexes} />
             </div>
         </div>
