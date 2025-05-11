@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+StandBoy NFT Generator 🌟
+Visit the Website
 
-## Getting Started
+🎨 Overview
+StandBoy is a web-based platform that allows users to generate unique StandBoy NFTs directly in the browser. Inspired by stylized, character-based NFT collections, the site offers a fun and simple way to create and download your own custom StandBoy characters.
 
-First, run the development server:
+⚙️ Features
+🧑‍🎨 Randomized StandBoy character generation
 
-```bash
+🖼️ Unique NFT-style visuals with each refresh
+
+💾 Option to download your StandBoy as an image
+
+🪄 Optimized for fast performance and simple UX
+
+🌐 Fully deployed and accessible via Vercel
+
+🚀 Technologies Used
+Next.js – React framework for server-side rendering and static site generation
+
+TypeScript – For type-safe development
+
+Tailwind CSS – Utility-first CSS for responsive design
+
+Vercel – Deployment and hosting
+
+## 🖼️ Screenshots
+
+### On Computer  
+![Homepage](./public/screenshot1.png)
+
+### On Mobile 
+![NFT Preview](./public/screenshot2.png)
+
+📦 Getting Started (Local Development)
+Clone the repo
+
+bash
+Copy
+Edit
+git clone https://github.com/your-username/standboy-nft.git
+cd standboy-nft
+Install dependencies
+
+bash
+Copy
+Edit
+npm install
+Run the development server
+
+bash
+Copy
+Edit
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Open http://localhost:3000 in your browser
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🧠 Inspiration
+This project was inspired by generative art collections in the NFT space, aiming to bring creativity and joy to users with randomized character art—no blockchain needed.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+📜 License
+MIT License
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🙌 Contributing
+Have ideas or want to expand the project into a full NFT minting platform? Feel free to fork and submit pull requests!
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
